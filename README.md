@@ -1,4 +1,4 @@
-# 🍛 Pondok Nusantara - Restaurant Management API
+# 🍛 Restaurant Management API
 
 Backend API yang tangguh untuk sistem manajemen restoran, dibangun menggunakan **Laravel 11** dan **Filament PHP**. Mendukung autentikasi OAuth, manajemen order realtime, dan penyimpanan object storage.
 
@@ -97,5 +97,7 @@ Buka file .env dan sesuaikan konfigurasi berikut:
 
     php artisan tes 
 
+## ⚙️ Dashboard admin 
+    http://localhost:8000/admin
 
 **Dibuat oleh Muhammad Fauzi Osama**
