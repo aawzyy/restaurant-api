@@ -19,6 +19,7 @@ Pastikan Anda telah menginstall:
 - MySQL
 - Redis 
 - Docker (Untuk menjalankan MinIO)
+- xampp
 
 ## 📦 Panduan Instalasi
 
@@ -44,12 +45,18 @@ Buka file .env dan sesuaikan konfigurasi berikut:
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306
-    DB_DATABASE=restaurant_db
+    DB_DATABASE=restaurant_api
     DB_USERNAME=root
     DB_PASSWORD=
 
 2. **Google OAuth (Login)**
 (Dapatkan credential dari Google Cloud Console.)
+
+    GOOGLE_CLIENT_ID=your-client-id.apps.googleusercontent.com
+    GOOGLE_CLIENT_SECRET=your-client-secret
+    GOOGLE_REDIRECT_URI=http://localhost:8000/auth/google/callback
+
+3. **MinIO (Object Storage)**
 
     FILESYSTEM_DISK=s3
     AWS_ACCESS_KEY_ID=minioadmin
@@ -57,9 +64,9 @@ Buka file .env dan sesuaikan konfigurasi berikut:
     AWS_DEFAULT_REGION=us-east-1
     AWS_BUCKET=restaurant-bucket
     AWS_USE_PATH_STYLE_ENDPOINT=true
-    AWS_ENDPOINT=[http://127.0.0.1:9000](http://127.0.0.1:9000)
+    AWS_ENDPOINT=http://127.0.0.1:9000
 
-3. **Queue & Cache**
+4. **Queue & Cache**
     QUEUE_CONNECTION=database
     CACHE_STORE=redis   
 
@@ -79,6 +86,8 @@ Buka file .env dan sesuaikan konfigurasi berikut:
 ## 🏃‍♂️ Menjalankan Aplikasi
 
 1. **Jalankan Server Laravel**
+(pastikan xampp telah berjalan)
+
     php artisan serve --host=0.0.0.0 --port=8000
 
 2. **Jalankan Queue Worker (Untuk Email OTP)**
@@ -89,4 +98,4 @@ Buka file .env dan sesuaikan konfigurasi berikut:
     php artisan tes 
 
 
-Dibuat dengan oleh Muhammad Fauzi Osama.
+**Dibuat oleh Muhammad Fauzi Osama**
