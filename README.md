@@ -72,13 +72,20 @@ Buka file .env dan sesuaikan konfigurasi berikut:
 
 ## 🗄️ Setup Database & MinIO
 
-1. **Jalankan Migrasi & Seeder**
-    php artisan migrate --seed
-
-2. **Setup MinIO (Via Docker)**
+1. **Setup MinIO (Via Docker)**
     cd docker
     docker compose up -d
-    (Buka http://localhost:9001 di browser, login, dan buat Bucket bernama restaurant-bucket)
+    (
+        Buka http://localhost:9001 di browser, 
+        login, dan buat Bucket bernama restaurant-bucket
+        ubah access bucket menjadi read only 
+            docker exec -it minio_server sh
+            mc alias set local http://localhost:9000 minioadmin minioadmin
+            mc anonymous set download local/restaurant-bucket
+    )
+
+2. **Jalankan Migrasi & Seeder**
+    php artisan migrate --seed
 
 3. **Link Storage**
     php artisan storage:link
@@ -96,6 +103,5 @@ Buka file .env dan sesuaikan konfigurasi berikut:
 ## ✅ Menjalankan Testing
 
     php artisan tes 
-
 
 **Dibuat oleh Muhammad Fauzi Osama**
