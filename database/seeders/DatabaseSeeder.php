@@ -22,8 +22,8 @@ class DatabaseSeeder extends Seeder
             User::create([
                 'name' => 'Fauzi Osama',
                 'email' => 'fauziosama14@gmail.com',
-                'password' => Hash::make('password'), // Password default: 'password'
-                'email_verified_at' => now(),
+                'password' => Hash::make('password123'), // Password default: 'password'
+                
             ]);
             $this->command->info('✅ Admin User created: fauziosama14@gmail.com | pass: password');
         }
