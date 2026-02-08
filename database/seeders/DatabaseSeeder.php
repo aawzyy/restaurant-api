@@ -51,7 +51,6 @@ class DatabaseSeeder extends Seeder
         // Menu Makanan
         Menu::firstOrCreate(['name' => 'Nasi Goreng Spesial'], [
             'price' => 25000,
-            'description' => 'Nasi goreng dengan telur, ayam suwir, dan kerupuk udang.',
             'category_id' => $kategoriMakanan->id,
             'is_available' => true,
             'image_path' => 'menus/nasigoreng.jpg', // Dummy path
@@ -59,7 +58,6 @@ class DatabaseSeeder extends Seeder
 
         Menu::firstOrCreate(['name' => 'Sate Ayam Madura'], [
             'price' => 30000,
-            'description' => 'Sate ayam 10 tusuk dengan bumbu kacang kental.',
             'category_id' => $kategoriMakanan->id,
             'is_available' => true,
             'image_path' => 'menus/sateayam.jpg',
@@ -68,7 +66,6 @@ class DatabaseSeeder extends Seeder
         // Menu Minuman
         Menu::firstOrCreate(['name' => 'Es Teh Manis'], [
             'price' => 5000,
-            'description' => 'Teh manis dingin segar.',
             'category_id' => $kategoriMinuman->id,
             'is_available' => true,
             'image_path' => 'menus/esteh.jpg',
@@ -76,7 +73,6 @@ class DatabaseSeeder extends Seeder
 
         Menu::firstOrCreate(['name' => 'Kopi Susu Gula Aren'], [
             'price' => 18000,
-            'description' => 'Kopi susu kekinian dengan gula aren asli.',
             'category_id' => $kategoriMinuman->id,
             'is_available' => true,
             'image_path' => 'menus/kopisusu.jpg',
@@ -85,7 +81,6 @@ class DatabaseSeeder extends Seeder
         // Menu Cemilan
         Menu::firstOrCreate(['name' => 'Kentang Goreng'], [
             'price' => 15000,
-            'description' => 'Kentang goreng renyah dengan saus sambal.',
             'category_id' => $kategoriCemilan->id,
             'is_available' => true,
             'image_path' => 'menus/kentang.jpg',
