@@ -51,10 +51,6 @@ class MenuResource extends Resource
                         ->prefix('Rp')
                         ->required(),
 
-                    Forms\Components\Textarea::make('description')
-                        ->label('Deskripsi')
-                        ->rows(3),
-
                     Forms\Components\Toggle::make('is_available')
                         ->label('Tersedia?')
                         ->default(true),

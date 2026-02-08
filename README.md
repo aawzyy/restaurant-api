@@ -70,6 +70,16 @@ Buka file .env dan sesuaikan konfigurasi berikut:
     QUEUE_CONNECTION=database
     CACHE_STORE=redis   
 
+5. **Email 2FA**
+    MAIL_MAILER=smtp
+    MAIL_HOST=smtp.gmail.com
+    MAIL_PORT=465
+    MAIL_USERNAME=your_email
+    MAIL_PASSWORD=your_app_password
+    MAIL_ENCRYPTION=ssl
+    MAIL_FROM_ADDRESS="your_email"
+    MAIL_FROM_NAME="${APP_NAME}"
+    
 ## 🗄️ Setup Database & MinIO
 
 1. **Setup MinIO (Via Docker)**
