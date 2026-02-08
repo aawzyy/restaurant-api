@@ -44,9 +44,9 @@ class DatabaseSeeder extends Seeder
         $this->command->info('✅ 10 Tables created.');
 
         // 3. BUAT KATEGORI & MENU
-        $kategoriMakanan = Category::firstOrCreate(['slug' => 'makanan-berat'], ['name' => 'Makanan Berat']);
-        $kategoriMinuman = Category::firstOrCreate(['slug' => 'minuman'], ['name' => 'Minuman']);
-        $kategoriCemilan = Category::firstOrCreate(['slug' => 'cemilan'], ['name' => 'Cemilan']);
+        $kategoriMakanan = Category::firstOrCreate(['name' => 'Makanan Berat']);
+        $kategoriMinuman = Category::firstOrCreate(['name' => 'Minuman']);
+        $kategoriCemilan = Category::firstOrCreate(['name' => 'Cemilan']);
 
         // Menu Makanan
         Menu::firstOrCreate(['name' => 'Nasi Goreng Spesial'], [
